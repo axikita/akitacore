@@ -14,5 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useKeys: 1
   usePad: 1
+  inputDampThreshold:
+    executionType: 0
+    baseVal: 0
+    floatVar: {fileID: 0}
+    conditionObject: {fileID: 0}
+    conditionMethod: 
+    argType: 0
+    argBool: 0
+    argInt: 0
+    argFloat: 0
+    argString: 
   key: 32
-  button: A
+  button: 
