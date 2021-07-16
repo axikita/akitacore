@@ -1,6 +1,5 @@
-#Akitacore
+# Akitacore
 
------
 **Akitacore** is a set of scripts that provides a broad foundation for structuring code in Unity.
 
 Akitacore provides a template for solving common game development tasks, such as:
@@ -18,9 +17,8 @@ Akitacore provides a template for solving common game development tasks, such as
 **Saving and Loading** - Since all vital persistent information is saved as ScriptableData, there's an easy library of everything you'd need to save or load on game exit. Axitacore provides ScriptableSaveLoad, an interface for converting your scriptabledata library into a text document format.
 
 
-##Intended Use
+## Intended Use
 
-------
 
 Unity is fairly unopinionated, but also fairly bare bones. Often times the easiest way to do a thing in unity is also bad practice.
 
@@ -34,18 +32,15 @@ Akitacore is not intended to be The Best way of structuring a game, this is just
 
 I'm a solo developer, not a big company. So Akitacore focuses on optimising for programmer effort. This is hopefully an easy way to make games. This is probably not the most computationally efficient way of making games. My design phiolosophy is, write reasonable code, then optimize when there's a performance bottleneck. Optimizations will be included when I run into issues myself.
 
-##Getting Started
+## Getting Started
 
-------
 
 If you want to use Akitacore in your game, follow the instructions for [Installing a unitypackage from a Git URL](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
 
 If you want to be able to edit the akitacore scripts, download akitacore, unzip the package, and place the files in your game's Assets directory. 
 
 
-##Documentation
-
--------
+## Documentation
 
 Documentation of Akitacore is provided [Here.](https://www.axiakita.com/documentation/akitacore)
 
@@ -53,9 +48,8 @@ This includes descriptions of the various systems, as well as guides on accompli
 
 I'm still catching up on documenting everything. For the time being, it may be necessary to refer to the code itself to understand how something works.
 
-##License
+## License
 
-------
 
 Akitacore is availiable under the MIT License. This means that you can use it in any commercial or noncommercial project. The only requirement is that you need to include attribution in your game's docs. A credit would be appreciated, but isn't required.
 
@@ -68,9 +62,7 @@ Akitacore makes use of several other open source projects:
 -The Serializable Callback inspector code was heavily referenced in writing the inspector for AkitacoreVariables.
 
 
-##Development
-
-------
+## Development
 
 Akitacore is developed by me, [Axi](https://www.axiakita.com). Fundamentally, this is intended as a core set of scripts for my own use, to make it easier to standardize my work and carry code and results across multiple game projects. It's also a great starting point for working with my colleagues.
 
