@@ -1,0 +1,27 @@
+{
+	"name":"com.axiakita.akitacore",
+	"version":"0.1.0",
+	"displayName":"Akitacore",
+	"description": "A broad foundation for structuring common development tasks.",
+	"unity":"2019.4",
+	"documentation":"https://www.axiakita.com/documentation/akiacore",
+	"author":{
+		"name":"Axi",
+		"email":"axi@axiakita.com",
+		"url":"https://www.axiakita.com"
+	},
+	"samples":[
+		{
+			"displayName": "Akitacore Demo",
+			"description": "Sample project that contains tutorial files and a basic game template.",
+			"path": "Samples~/DemoGame"
+		},
+		{
+			"displayName": "Sample Scripts",
+			"description": "Templates and examples of akitacore scripts to get you started on your own game.",
+			"path": "Samples~/SampleScripts"
+		}
+		
+	]
+	
+}

@@ -1,0 +1,3 @@
+InvokableEvent scripts are simple components that expose a public meothod that can be invoked with UnityEvent.Invoke. This is used in conjunction with utilities like EventOnActive or SceneInitializer.
+
+By default, a UnityEvent can only call public methods with zero or one parameter. InvokableEvents should be designed to fit that format, but can have additional configuration options on the component itself, to allow UnityEvents to be used to trigger more complex behaviors.

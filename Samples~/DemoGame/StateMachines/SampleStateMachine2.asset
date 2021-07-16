@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5910ccfd6bba745ad60f1e14e48a04, type: 3}
+  m_Name: SampleStateMachine2
+  m_EditorClassIdentifier: 
+  debugString: set From Drag Function
+  forks:
+  - editorPosition: {x: 761, y: 235}
+    type: 1
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: -1
+      targetStateKey: MoveUp
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: -1
+      targetStateKey: MoveRight
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: -1
+      targetStateKey: MoveDown
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: -1
+      targetStateKey: MoveLeft
+  stateKeys:
+  - MoveLeft
+  - MoveUp
+  - MoveDown
+  - MoveRight
+  - _AKITACORE_STATE_MACHINE_INITIAL_STATE_RESERVED_VALUE_30e6eucfqhavmc7l96c2
+  stateValues:
+  - entryTime: 13.600607
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: 0
+      targetStateKey: 
+    editorPosition: {x: 416, y: 234}
+  - entryTime: 14.605237
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: 0
+      targetStateKey: 
+    editorPosition: {x: 685, y: 77}
+  - entryTime: 11.0795965
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: 0
+      targetStateKey: 
+    editorPosition: {x: 686, y: 392}
+  - entryTime: 14.104372
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: 0
+      targetStateKey: 
+    editorPosition: {x: 948, y: 234}
+  - entryTime: 0
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: 0
+      targetStateKey: 
+    editorPosition: {x: 409, y: 89}
+  parameters:
+  - name: newbool
+    type: 0
+    boolParam: 0
+    floatParam: 0
+    intParam: 0
+  - name: newfloat
+    type: 1
+    boolParam: 0
+    floatParam: 0
+    intParam: 0

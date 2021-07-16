@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5910ccfd6bba745ad60f1e14e48a04, type: 3}
+  m_Name: _Demo_StateMachine
+  m_EditorClassIdentifier: 
+  debugString: set From Drag Function
+  forks: []
+  stateKeys:
+  - Rest
+  - MoveDown
+  - MoveRight
+  - MoveUp
+  - MoveLeft
+  - _AKITACORE_STATE_MACHINE_INITIAL_STATE_RESERVED_VALUE_30e6eucfqhavmc7l96c2
+  - Bloodthirst
+  stateValues:
+  - entryTime: 0
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: Rest
+        type: 0
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 1
+        transitionTime: 1
+      targetForkIndex: -1
+      targetStateKey: MoveDown
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 2
+        compareType: 1
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 100
+        invertToggle: 0
+        transitionTime: 1
+      targetForkIndex: -1
+      targetStateKey: Bloodthirst
+    editorPosition: {x: 827, y: 281}
+  - entryTime: 14.128982
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: -1
+      targetStateKey: MoveLeft
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: TestParameter
+        type: 2
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 1
+      targetForkIndex: -1
+      targetStateKey: MoveRight
+    editorPosition: {x: 490, y: 282}
+  - entryTime: 13.626039
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: Rest
+        type: 0
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 1
+        transitionTime: 1
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: -1
+      targetStateKey: MoveDown
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: Rest
+        type: 0
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 1
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: -1
+      targetStateKey: Rest
+    editorPosition: {x: 827, y: 144}
+  - entryTime: 13.125814
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 3
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: -1
+      targetStateKey: MoveRight
+    editorPosition: {x: 629, y: 42}
+  - entryTime: 14.633473
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions:
+      - parameterName: 
+        type: 3
+        compareType: 0
+        boolParamValue: 0
+        floatParamValue: 0
+        floatParamThreshold: 0
+        intParamValue: 0
+        intParamThreshold: 0
+        invertToggle: 0
+        transitionTime: 0.5
+      targetForkIndex: -1
+      targetStateKey: MoveUp
+    editorPosition: {x: 433, y: 141}
+  - entryTime: 0
+    transitions:
+    - markovTransitionWeight: 1
+      transitionPriority: 1
+      transitionConditions: []
+      targetForkIndex: -1
+      targetStateKey: Rest
+    editorPosition: {x: 539, y: 441}
+  - entryTime: 0.02
+    transitions: []
+    editorPosition: {x: 827, y: 443}
+  parameters:
+  - name: Rest
+    type: 0
+    boolParam: 0
+    floatParam: 0
+    intParam: 0
+  - name: TestParameter
+    type: 2
+    boolParam: 0
+    floatParam: 0
+    intParam: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0e663e97e9b0d449535d747d83271c, type: 3}
+  m_Name: SpeakerLibrary
+  m_EditorClassIdentifier: 
+  speakers:
+  - {fileID: 11400000, guid: 8cf17c681d5a5b84ca3848c5d9b6e1c9, type: 2}
+  - {fileID: 11400000, guid: added69b73de09a4d821dd2f4c9bcb9b, type: 2}
+  playerCharacterNames:
+  - DumbdleDog

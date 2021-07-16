@@ -1,0 +1,1 @@
+Make sure that the Resources folder is placed directly under /assets. The rest can be put anywhere.
