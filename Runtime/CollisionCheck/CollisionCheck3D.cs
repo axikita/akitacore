@@ -84,6 +84,10 @@ public class CollisionCheck3D : MonoBehaviour {
 			bottomFound = false;
 			frontFound = false;
 			backFound = false;
+			collNormals.Clear();
+			foreach(var norm in frameNormals){
+				collNormals.Add(norm);	
+			}
 			frameNormals.Clear ();
 
 		} else { //set reporters
@@ -245,7 +249,7 @@ public class CollisionCheck3D : MonoBehaviour {
 		frontHit = frontFound;
 		backHit = backFound;
 
-		collNormals = frameNormals;
+		//collNormals = frameNormals; //moved to the start of fixedupdate
 	}
 
 

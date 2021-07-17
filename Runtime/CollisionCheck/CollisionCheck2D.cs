@@ -14,7 +14,7 @@ public class CollisionCheck2D : MonoBehaviour {
 	List<GameObject> frameTriggers;
 
 	public List<Vector2> collNormals;
-	List<Vector2> frameNormals;
+	public List<Vector2> frameNormals;
 
 	public bool onGround;
 	bool groundFound; //latch for loop behavior
@@ -71,14 +71,20 @@ public class CollisionCheck2D : MonoBehaviour {
 
 		//Collision--------------
 		if (colliding) { //set flags
+			Debug.Log("Colliding Reset on "+gameObject.name);
 			groundFound = false;
 			rightFound = false;
 			topFound = false;
 			leftFound = false;
 			bottomFound = false;
+			collNormals.Clear();
+			foreach(var norm in frameNormals){
+				collNormals.Add(norm);	
+			}
 			frameNormals.Clear ();
 
 		} else { //set reporters
+			Debug.Log("Non-Colliding Reset on "+gameObject.name);
 			onGround = false;
 			rightHit = false;
 			topHit = false;
@@ -108,6 +114,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	//--Collision Events------------------------------------------------------------------------------
 	void OnCollisionEnter2D(Collision2D coll){
+		Debug.Log("collcheckOnEnter");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);
@@ -117,6 +124,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	}
 	void OnCollisionStay2D(Collision2D coll){
+		Debug.Log("collcheckOnStay------------------------------------------------****");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);
@@ -126,6 +134,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	}
 	void OnCollisionExit2D(Collision2D coll){
+		Debug.Log("collcheckOnexit");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);
@@ -201,7 +210,7 @@ public class CollisionCheck2D : MonoBehaviour {
 		leftHit = leftFound;
 		bottomHit = bottomFound;
 
-		collNormals = frameNormals;
+		//collNormals = frameNormals;
 	}
 
 
