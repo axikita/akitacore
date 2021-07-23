@@ -71,7 +71,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 		//Collision--------------
 		if (colliding) { //set flags
-			Debug.Log("Colliding Reset on "+gameObject.name);
+			//Debug.Log("Colliding Reset on "+gameObject.name);
 			groundFound = false;
 			rightFound = false;
 			topFound = false;
@@ -84,7 +84,7 @@ public class CollisionCheck2D : MonoBehaviour {
 			frameNormals.Clear ();
 
 		} else { //set reporters
-			Debug.Log("Non-Colliding Reset on "+gameObject.name);
+			//Debug.Log("Non-Colliding Reset on "+gameObject.name);
 			onGround = false;
 			rightHit = false;
 			topHit = false;
@@ -99,7 +99,10 @@ public class CollisionCheck2D : MonoBehaviour {
 
 		//Trigger----------------
 		if (triggering) {
-			triggers = frameTriggers;
+			triggers.Clear();
+			foreach(var trgr in frameTriggers){
+				triggers.Add(trgr);
+			}
 			frameTriggers.Clear ();
 
 		} else {
@@ -114,7 +117,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	//--Collision Events------------------------------------------------------------------------------
 	void OnCollisionEnter2D(Collision2D coll){
-		Debug.Log("collcheckOnEnter");
+		//Debug.Log("collcheckOnEnter");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);
@@ -124,7 +127,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	}
 	void OnCollisionStay2D(Collision2D coll){
-		Debug.Log("collcheckOnStay------------------------------------------------****");
+		//Debug.Log("collcheckOnStay------------------------------------------------****");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);
@@ -134,7 +137,7 @@ public class CollisionCheck2D : MonoBehaviour {
 
 	}
 	void OnCollisionExit2D(Collision2D coll){
-		Debug.Log("collcheckOnexit");
+		//Debug.Log("collcheckOnexit");
 		colliding = true;
 		GroundCheck (coll);
 		SurroundingsCheck (coll);

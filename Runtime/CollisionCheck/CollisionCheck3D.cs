@@ -107,7 +107,10 @@ public class CollisionCheck3D : MonoBehaviour {
 
 		//Trigger----------------
 		if (triggering) {
-			triggers = frameTriggers;
+			triggers.Clear();
+			foreach(var trgr in frameTriggers){
+				triggers.Add(trgr);
+			}
 			frameTriggers.Clear ();
 
 		} else {

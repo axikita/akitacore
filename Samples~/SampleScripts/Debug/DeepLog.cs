@@ -14,7 +14,7 @@ public class DeepLog : MonoBehaviour
 {
 
 	
-	string variableNameInLog = "collNormal_Count";
+	string variableNameInLog = "trigger_Count";
 	
 	public bool collisionsAre3D =true;
 	
@@ -24,7 +24,7 @@ public class DeepLog : MonoBehaviour
 	
 	//define a method here that returns a string:
 	string GetValueAsString(){
-		return collCheck.collNormals.Count.ToString();
+		return collCheck.triggers.Count.ToString();
 	}
 	
 	
