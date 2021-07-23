@@ -1,6 +1,6 @@
 {
 	"name":"com.axiakita.akitacore",
-	"version":"0.1.1",
+	"version":"0.1.2",
 	"displayName":"Akitacore",
 	"description": "A broad foundation for structuring common development tasks.",
 	"unity":"2019.4",
