@@ -47,6 +47,8 @@ public class StateMachineGeneric : MonoBehaviour{
 	//Determine the state for the next frame, and execute OnXXX events. 
 	//Any state that is reached will persist for at least one frame, executing each of it's OnXXX behaviors.
 	void Update () {
+		
+		PreUpdate();
 
 		if (!suspended) {
 			
@@ -71,6 +73,8 @@ public class StateMachineGeneric : MonoBehaviour{
 		} else {
 			PerformStay (false);
 		}
+		
+		PostUpdate();
 			
 
 	}
