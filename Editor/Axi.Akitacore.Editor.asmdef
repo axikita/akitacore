@@ -7,23 +7,12 @@
         "GUID:28b0ed98690ceff4b830f88488692b76",
         "GUID:2bafac87e7f4b9b418d9448d219b01ab"
     ],
-    "includePlatforms": [
+    "includePlatforms": [],
+    "excludePlatforms": [
         "Android",
-        "iOS",
-        "LinuxStandalone64",
-        "Lumin",
-        "macOSStandalone",
-        "PS4",
-        "Stadia",
-        "Switch",
-        "tvOS",
-        "WSA",
-        "WindowsStandalone32",
-        "WindowsStandalone64",
-        "XboxOne"
+        "WebGL"
     ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
