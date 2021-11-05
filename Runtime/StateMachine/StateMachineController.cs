@@ -25,9 +25,15 @@ public class StateMachineController : StateMachineGeneric
 	
 	public override void PreUpdate(){
 		foreach(var actionSet in stateActionSets){
-			actionSet.OnEnter.PreUpdate();
-			actionSet.OnStay.PreUpdate();
-			actionSet.OnExit.PreUpdate();
+			if(actionSet.OnEnter !=null){
+				actionSet.OnEnter.PreUpdate();
+			}
+			if(actionSet.OnStay !=null){
+				actionSet.OnStay.PreUpdate();
+			}
+			if(actionSet.OnExit !=null){
+				actionSet.OnExit.PreUpdate();
+			}
 		}
 	}
 	
@@ -63,9 +69,15 @@ public class StateMachineController : StateMachineGeneric
 	
 	public override void PostUpdate(){
 		foreach(var actionSet in stateActionSets){
-			actionSet.OnEnter.PostUpdate();
-			actionSet.OnStay.PostUpdate();
-			actionSet.OnExit.PostUpdate();
+			if(actionSet.OnEnter !=null){
+				actionSet.OnEnter.PostUpdate();
+			}
+			if(actionSet.OnStay !=null){
+				actionSet.OnStay.PostUpdate();
+			}
+			if(actionSet.OnExit !=null){
+				actionSet.OnExit.PostUpdate();
+			}
 		}
 	}
 	
