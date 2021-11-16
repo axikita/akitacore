@@ -267,7 +267,7 @@ public class YarnIntegrityEditor : EditorWindow {
 
 	void CheckSpeakers(){
 		if (fullText.Length > 0) {
-			var matches = Regex.Matches (fullText, "\\n(\\w+)\\:");
+			var matches = Regex.Matches (fullText, "\\n\\s*(\\w[\\w\\s]+)\\:"); //newline, then any number of spaces, then at least one word character, followed by whatever until :
 
 			List<string> foundNames;
 			foundNames = new List<string> ();
@@ -425,8 +425,9 @@ public class YarnIntegrityEditor : EditorWindow {
 			var foundVars = new List<string>();
 
 			for(int i=0; i<matches.Count; i++){
-				if(!foundVars.Contains(matches[i].Groups[1].ToString()));
-				foundVars.Add(matches[i].Groups[1].ToString());
+				if(!foundVars.Contains(matches[i].Groups[1].ToString())){
+					foundVars.Add(matches[i].Groups[1].ToString());
+				}
 			}
 			
 

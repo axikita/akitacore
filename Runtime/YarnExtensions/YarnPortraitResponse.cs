@@ -180,6 +180,29 @@ public class YarnPortraitResponse : MonoBehaviour {
 				}
 			}
 		}
+		
+		//at this point, a valid speaker has not been found.
+		if(speakerLibrary.defaultSpeaker!=null){
+			if(lookup.speaker == speakerLibrary.defaultSpeaker.speaker){
+				Debug.LogWarning("invalid lookup information found in CheckSprite");
+				return lookup;
+			} else {
+				lookup.speaker = speakerLibrary.defaultSpeaker.speaker;
+				lookup.emote="";
+				//this next bit is copied with alterations from SetLookupValues for assigning SpriteSide
+				foreach(var spkr in speakerLibrary.speakers){
+					if (spkr.speaker == lookup.speaker){
+						lookup.asymmetric = spkr.isAsymmetrical;
+						if(spkr.spriteSide == SpeakerData.SpriteSide.left){
+							lookup.displaySide = SpriteLookup.Handed.L;
+						} else {
+							lookup.displaySide = SpriteLookup.Handed.R;
+						}
+					}
+				}
+				return CheckSprite(lookup); //recursion should only occur once. On the second pass, the previous if statement will be true.
+			}
+		}
 		Debug.LogWarning("invalid lookup information found in CheckSprite");
 		return lookup;
 	}

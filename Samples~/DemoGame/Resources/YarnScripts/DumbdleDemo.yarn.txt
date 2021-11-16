@@ -16,7 +16,7 @@ tags:
 colorID: 0
 position: 473,197
 ---
-DumbdleSign: Hello DumbdleDog, would you like to see a test of the Yarnspinner Akitacore Features?
+Dumbdle Sign: Hello DumbdleDog, would you like to see a test of the Yarnspinner Akitacore Features?
 [[No Thanks|Decline]]
 [[Yeah, sure|DemoNode]]
 [[About the other dog...|OtherDog]]
@@ -26,18 +26,18 @@ tags:
 colorID: 0
 position: 666,543
 ---
-DumbdleSign: Oh, right, the other dog is an NPC run by a state machine.
-DumbdleSign: Do you want to change their behavior?
+Dumbdle Sign: Oh, right, the other dog is an NPC run by a state machine.
+Dumbdle Sign: Do you want to change their behavior?
 -> Nah
-	DumbdleSign: Alright, we'll leave them alone.
+	Dumbdle Sign: Alright, we'll leave them alone.
 	
 -> Start Walking
 	<<set $_DemoGame_DumbdleDogNPC_Rest = false>>
-	DumbdleSign: Alright, we'll have them walk around.
+	Dumbdle Sign: Alright, we'll have them walk around.
 
 ->Stop Walking
 	<<set $_DemoGame_DumbdleDogNPC_Rest = true>>
-	DumbdleSign: Alright, we'll have them stop.
+	Dumbdle Sign: Alright, we'll have them stop.
 
 ===
 title: Decline
@@ -45,26 +45,27 @@ tags:
 colorID: 0
 position: 0,0
 ---
-DumbdleSign: Alright, toodles.
+Dumbdle Sign: Alright, toodles.
 ===
 title: DemoNode
 tags:
 colorID: 0
 position: 0,0
 ---
-DumbdleSign: Sounds good, let's get started!
+Dumbdle Sign: Sounds good, let's get started!
 DumbdleDog: Alright!
-DumbdleSign: First off, text formatting.
-DumbdleSign: Any unity markdown is supported.
-DumbdleSign: You can do <b>bold,</b> <i>italic,</i> and <i>even <b>nested</b></i> tags.
-DumbdleSign: <color=#ff66b2ff>Color tags</color> work fine too.
-DumbdleSign: Next up, portraits and expressions. 
-DumbdleSign: As you can tell, our respective talk sprites show whenever we talk.
+Dumbdle Sign: First off, text formatting.
+Dumbdle Sign: Any unity markdown is supported.
+Dumbdle Sign: You can do <b>bold,</b> <i>italic,</i> and <i>even <b>nested</b></i> tags.
+Dumbdle Sign: <color=#ff66b2ff>Color tags</color> work fine too.
+Dumbdle Sign: Next up, portraits and expressions. 
+Dumbdle Sign: As you can tell, our respective talk sprites show whenever we talk.
 DumbdleDog: I did notice that, yes
-DumbdleSign: But also, you can change the expression of the talksprite with an emote, like \:test:
+Dumbdle Sign: But also, you can change the expression of the talksprite with an emote, like \:test:
 DumbdleDog: Woah! :gasp:
-DumbdleSign: Yeah, like that.
-DumbdleSign: Now let's do variables. Pick a number.
+Dumbdle Sign: Yeah, like that.
+BrokenSign: Also, a fallback portrait can be assigned for nondefined speakers.
+Dumbdle Sign: Now let's do variables. Pick a number.
 -> 1
 	<<set $_DemoGame_TestInt = 1>>
 	DumbdleDog: 1 please
@@ -75,55 +76,55 @@ DumbdleSign: Now let's do variables. Pick a number.
 	DumbdleDog: 3 please
 	<<set $_DemoGame_TestInt = 3>>
 
-DumbdleSign: Alright, you just set $_DemoGame_TestInt" to your choice. Now let's see if I can remember it.
+Dumbdle Sign: Alright, you just set $_DemoGame_TestInt" to your choice. Now let's see if I can remember it.
 <<if $_DemoGame_TestInt == 1>>
-	DumbdleSign: ...
-	DumbdleSign: Ah, you picked One.
+	Dumbdle Sign: ...
+	Dumbdle Sign: Ah, you picked One.
 <<elseif $_DemoGame_TestInt == 2>>
-	DumbdleSign: ...
-	DumbdleSign: Ah, you picked Two.
+	Dumbdle Sign: ...
+	Dumbdle Sign: Ah, you picked Two.
 <<else>>
-	DumbdleSign: ...
-	DumbdleSign: Ah, you picked Three.
+	Dumbdle Sign: ...
+	Dumbdle Sign: Ah, you picked Three.
 <<endif>>
 
-DumbdleSign: Now let's do commands. You won't see these in the dialogue, but you will in the script, and they should do stuff in game.
+Dumbdle Sign: Now let's do commands. You won't see these in the dialogue, but you will in the script, and they should do stuff in game.
 
-DumbdleSign: "Note" doesn't do anything. It's just there for notes.
+Dumbdle Sign: "Note" doesn't do anything. It's just there for notes.
 <<Note: It's true, notes are just here for adding comments.>>
 
-DumbdleSign: "Destroy" will destroy an object. See that red box that I hopefully haven't destroyed yet? fuck that box.
+Dumbdle Sign: "Destroy" will destroy an object. See that red box that I hopefully haven't destroyed yet? fuck that box.
 <<Destroy DestructionDemoBox>>
 
-DumbdleSign: "SetActive" will deactivate or activate an object. See that blue box? I'm tired of it.
+Dumbdle Sign: "SetActive" will deactivate or activate an object. See that blue box? I'm tired of it.
 <<SetActive ActiveDemoBox, false>>
 
-DumbdleSign: But now that it's gone, I find that I miss what we had.
-DumbdleSign: Let's bring it back.
+Dumbdle Sign: But now that it's gone, I find that I miss what we had.
+Dumbdle Sign: Let's bring it back.
 <<SetActive ActiveDemoBox, true>>
 
-DumbdleSign: Now for "Cinematic"! Cinematics are a cool way to spice up a scene with a fullscreen splash image.
+Dumbdle Sign: Now for "Cinematic"! Cinematics are a cool way to spice up a scene with a fullscreen splash image.
 <<Cinematic DemoCinematicBack, false>>
-DumbdleSign: Here's a cinematic behind the dialogue. 
+Dumbdle Sign: Here's a cinematic behind the dialogue. 
 DumbdleDog: So this is a cinematic?
 <<Cinematic DemoCinematicFront, true>>
-DumbdleSign: (still need some text to pause the dialoge progression for a beat)
+Dumbdle Sign: (still need some text to pause the dialoge progression for a beat)
 <<ClearCinematic>>
-DumbdleSign: And, we can go back to normal with "ClearCinematic."
+Dumbdle Sign: And, we can go back to normal with "ClearCinematic."
 
-DumbdleSign: What about audio? That's a real thing that exists.
-DumbdleSign: Let's get some Sweet Jams going with "Playsong".
+Dumbdle Sign: What about audio? That's a real thing that exists.
+Dumbdle Sign: Let's get some Sweet Jams going with "Playsong".
 <<PlaySong TestPureToneC5>>
-DumbdleSign: Anyone who tells you music should have more than one note is just being indecisive.
-DumbdleSign: Here's a sound effect, too, with "PlaySound." 
+Dumbdle Sign: Anyone who tells you music should have more than one note is just being indecisive.
+Dumbdle Sign: Here's a sound effect, too, with "PlaySound." 
 <<PlaySound MewShoot>>
 DumbdleDog: !
-DumbdleSign:Songs replace each other, multiple sounds can be playing at once.
-DumbdleSign: Alright, I'm music'd out. Let's replace that with nothing.
+Dumbdle Sign:Songs replace each other, multiple sounds can be playing at once.
+Dumbdle Sign: Alright, I'm music'd out. Let's replace that with nothing.
 <<PlaySong Null>>
 
 DumbdleDog: Is that everything?
-DumbdleSign: Yeah, that's the supported features. Check out the yarnspinner documentation and the akitacore documentation for more details.
+Dumbdle Sign: Yeah, that's the supported features. Check out the yarnspinner documentation and the akitacore documentation for more details.
 
 Oh yeah, here's a line of narration. If you don't specify a speaker, no icon will appear.
 
@@ -133,8 +134,8 @@ tags:
 colorID: 0
 position: 473,197
 ---
-DumbdleSign: Hello DumbdleDog!
-DumbdleDog: Hi DumbdleSign!
+Dumbdle Sign: Hello DumbdleDog!
+DumbdleDog: Hi Dumbdle Sign!
 DumbdleDog: This is a test of emotes. :3
 DumbdleDog: Now I'm going to change the start node. Talk to you later!
 <<set $_DemoGame_DumbdleSign_StartNode = "AltStart">>
@@ -144,7 +145,7 @@ tags:
 colorID: 0
 position: 759,199
 ---
-DumbdleSign: DumbdleDog, You did it!!!! You changed a yarn variable!
+Dumbdle Sign: DumbdleDog, You did it!!!! You changed a yarn variable!
 DumbdleDog: Yay!!
 ===
 title: Main
@@ -152,7 +153,7 @@ tags:
 colorID: 0
 position: 0,0
 ---
-DumbdleSign: Let's go through the various akitacore yarn extensions and make sure they all work.
+Dumbdle Sign: Let's go through the various akitacore yarn extensions and make sure they all work.
 DumbdleDog: Sounds good!
 
 ===

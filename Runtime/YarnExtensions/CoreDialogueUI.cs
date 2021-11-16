@@ -477,7 +477,7 @@ public class CoreDialogueUI : Yarn.Unity.DialogueUIBehaviour {
 		string remainder = "";
 
 		//this always returns 3 groups: the full text, the name (possibly empty) and the rest.
-		var match = Regex.Match(raw,"^(?:([A-Za-z./%+-]+):\\s*)?(.+)$");
+		var match = Regex.Match(raw,"^(?:([\\sA-Za-z./%+-]+):\\s*)?(.+)$");
 
 		speaker = match.Groups [1].ToString ();
 		remainder = match.Groups [2].ToString ();

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0e663e97e9b0d449535d747d83271c, type: 3}
   m_Name: SpeakerLibrary
   m_EditorClassIdentifier: 
+  defaultSpeaker: {fileID: 11400000, guid: 889f940c69d5f2945a7be46210273367, type: 2}
   speakers:
-  - {fileID: 11400000, guid: 8cf17c681d5a5b84ca3848c5d9b6e1c9, type: 2}
+  - {fileID: 11400000, guid: 889f940c69d5f2945a7be46210273367, type: 2}
   - {fileID: 11400000, guid: added69b73de09a4d821dd2f4c9bcb9b, type: 2}
+  - {fileID: 11400000, guid: 8cf17c681d5a5b84ca3848c5d9b6e1c9, type: 2}
   playerCharacterNames:
   - DumbdleDog

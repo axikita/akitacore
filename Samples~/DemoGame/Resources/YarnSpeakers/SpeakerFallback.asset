@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2abb36da1182a34daccf9ea74a16441, type: 3}
-  m_Name: SpeakerDumbdleSign
+  m_Name: SpeakerFallback
   m_EditorClassIdentifier: 
-  speaker: Dumbdle Sign
-  isAsymmetrical: 1
+  speaker: Fallback
+  isAsymmetrical: 0
   spriteSide: 1
   idleLeft:
     emote: 
-    portrait: []
+    portrait:
+    - {fileID: 21300000, guid: 5349e892fdefeac4d8ae794aca9b82d7, type: 3}
     portraitFramerate: 12
     alwaysAnimate: 0
   idleRight:
     emote: 
-    portrait:
-    - {fileID: 21300000, guid: 310aba214d9c93442a9fed15e192f24b, type: 3}
+    portrait: []
     portraitFramerate: 12
     alwaysAnimate: 0
   emoteLibrary: []

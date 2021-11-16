@@ -7,6 +7,7 @@ namespace Akitacore{
 [CreateAssetMenu(fileName = "SpeakerLibrary", menuName = "ScriptableObjects/YarnAssets/SpeakerLibrary", order = 100)]
 public class SpeakerLibrary : ScriptableObject
 {
+	public SpeakerData defaultSpeaker;
     public List<SpeakerData> speakers;
     
     [Tooltip("Depricated. Use SpeakerData.spriteSide instead.")]
